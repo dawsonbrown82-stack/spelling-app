@@ -1,0 +1,121 @@
+/* --------- Global --------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f5f7fa;
+  color: #222;
+  text-align: center;
+}
+
+/* --------- Header --------- */
+h1 {
+  margin-bottom: 10px;
+}
+
+/* --------- Word Card --------- */
+#word {
+  margin: 30px auto;
+  padding: 40px 20px;
+  max-width: 500px;
+
+  font-size: 32px;
+  font-weight: 600;
+
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+  /* Swipe UX */
+  user-select: none;
+  touch-action: pan-y;
+
+  /* Subtle hint */
+  position: relative;
+}
+
+/* Swipe arrows (visual cue) */
+#word::before,
+#word::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  opacity: 0.25;
+}
+
+#word::before {
+  content: "←";
+  left: 15px;
+}
+
+#word::after {
+  content: "→";
+  right: 15px;
+}
+
+/* --------- Controls --------- */
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  font-size: 16px;
+  padding: 12px 20px;
+  margin: 6px;
+  border: none;
+  border-radius: 10px;
+  background: #007aff;
+  color: white;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button.secondary {
+  background: #555;
+}
+
+input[type="number"] {
+  font-size: 16px;
+  padding: 8px;
+  width: 80px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* --------- Results --------- */
+.results {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* --------- Small screens --------- */
+@media (max-width: 400px) {
+  #word {
+    font-size: 26px;
+    padding: 30px 15px;
+  }
+}
+
+/* --------- Swipe Animations --------- */
+#word {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+#word.swipe-right {
+  transform: translateX(120%);
+  opacity: 0;
+}
+
+#word.swipe-left {
+  transform: translateX(-120%);
+  opacity: 0;
+}
