@@ -292,6 +292,7 @@ let wrongWords = [];
 let currentIndex = 0;
 let touchStartX = 0;
 let touchEndX = 0;
+let currentWord = null;
 
 const SWIPE_THRESHOLD = 50; // pixels
 
@@ -397,7 +398,8 @@ function nextWord() {
 function showWord() {
   const wordEl = document.getElementById("word");
   const w = sessionWords[currentIndex];
-  
+
+  currentWord = w
   wordEl.style.transition = "none";
   wordEl.style.transform = "translateX(0)";
   wordEl.style.opacity = "1";
@@ -500,3 +502,4 @@ function showSentence() {
 function clearInfo() {
   infoArea.innerHTML = "";
 }
+
