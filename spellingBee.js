@@ -3,6 +3,7 @@
  ***********************/
 
 const STORAGE_KEY = "spellingAppState_v1";
+const infoArea = document.getElementById("infoArea");
 
 // Example word list — replace with your real data
 const grade6Words = [  
@@ -384,6 +385,7 @@ function nextWord() {
   } else {
     showWord();
   }
+  clearinfo();
   saveState();
 }
 
@@ -474,4 +476,27 @@ function animateSwipe(direction) {
     wordEl.classList.remove("swipe-right", "swipe-left");
     nextWord();
   }, 250);
+
+}
+
+function showDefinition() {
+  if (!currentWord) return;
+
+  infoArea.innerHTML = `
+    <strong>Definition:</strong><br>
+    ${currentWord.definition}
+  `;
+}
+
+function showSentence() {
+  if (!currentWord) return;
+
+  infoArea.innerHTML = `
+    <strong>Sentence:</strong><br>
+    ${currentWord.sentence}
+  `;
+}
+
+function clearInfo() {
+  infoArea.innerHTML = "";
 }
