@@ -386,7 +386,7 @@ function nextWord() {
   } else {
     showWord();
   }
-  clearinfo();
+  clearInfo();
   saveState();
 }
 
@@ -504,4 +504,5 @@ function showSentence() {
 function clearInfo() {
   infoArea.innerHTML = "";
 }
+
 
