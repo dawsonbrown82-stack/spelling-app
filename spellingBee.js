@@ -580,18 +580,22 @@ function handleSwipe() {
 function onModeChange() {
   clearInfo();
 
+  // HARD reset in-memory state when grade changes
+  remainingWords = [];
+  sessionWords = [];
+  wrongWords = [];
+  currentIndex = 0;
+
   const restored = loadState();
 
   if (restored && sessionWords.length > 0) {
     showWord();
   } else {
     remainingWords = getFilteredWords();
-    sessionWords = [];
-    wrongWords = [];
-    currentIndex = 0;
     updateDisplay("Press Start");
   }
 }
+
 
 
 
