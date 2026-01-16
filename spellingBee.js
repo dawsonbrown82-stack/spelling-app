@@ -525,7 +525,6 @@ const SWIPE_THRESHOLD = 50; // pixels
  
  
 function initFreshState() {
-  infoArea = document.getElementById("infoArea");
   remainingWords = getFilteredWords();
   sessionWords = [];
   wrongWords = [];
@@ -534,6 +533,7 @@ function initFreshState() {
 
 function init() {
   const restored = loadState();
+  infoArea = document.getElementById("infoArea");
 
   if (restored && sessionWords.length > 0) {
     showWord();
