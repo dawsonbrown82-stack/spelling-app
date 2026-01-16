@@ -522,6 +522,8 @@ const SWIPE_THRESHOLD = 50; // pixels
 /***********************
  * INITIALIZATION
  ***********************/
+ 
+ 
 function initFreshState() {
   infoArea = document.getElementById("infoArea");
   remainingWords = getFilteredWords();
@@ -561,7 +563,6 @@ function setupSwipe() {
 }
 
 
-
 window.onload = init;
 
 function handleSwipe() {
@@ -575,6 +576,25 @@ function handleSwipe() {
     markWrong(); // swipe left
   }
 }
+
+function onModeChange() {
+  clearInfo();
+
+  const restored = loadState();
+
+  if (restored && sessionWords.length > 0) {
+    showWord();
+  } else {
+    remainingWords = getFilteredWords();
+    sessionWords = [];
+    wrongWords = [];
+    currentIndex = 0;
+    updateDisplay("Press Start");
+  }
+}
+
+
+
 
 function getFilteredWords() {
   const includeNormal = document.getElementById("normalChk").checked;
@@ -597,6 +617,12 @@ function getFilteredWords() {
  ***********************/
 
 function startSession(n) {
+  
+  
+  if (sessionWords.length > 0 && currentIndex < sessionWords.length) {
+    showWord();
+    return;
+  }
   
   sessionWords = [];
   currentIndex = 0;

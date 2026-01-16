@@ -37,7 +37,7 @@
 
   <h1>Spelling Practice</h1>
   
-  <select id="gradeSelect">
+  <select id="gradeSelect" onchange="onModeChange()">
   <option value="grade1">1st Grade</option>
   <option value="grade6">6th Grade</option>
   </select>
@@ -54,12 +54,12 @@
 
   <div class="filters">
     <label>
-      <input type="checkbox" id="normalChk" checked>
+      <input type="checkbox" id="normalChk" onchange="onModeChange()" checked>
       Normal
     </label>
 
     <label>
-      <input type="checkbox" id="challengingChk" checked>
+      <input type="checkbox" id="challengingChk" onchange="onModeChange()" checked>
       Challenging
     </label>
   </div>
