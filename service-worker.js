@@ -3,8 +3,8 @@ const CACHE_NAME = "spelling-bee-v4";
 const FILES_TO_CACHE = [
   "./",
   "./index.html",
-  "./app.js",
-  "./app.css",
+  "./spellingBee.js",
+  "./SpellinBee.css",
   "./manifest.json"
 ];
 
