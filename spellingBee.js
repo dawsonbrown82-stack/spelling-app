@@ -579,6 +579,8 @@ function handleSwipe() {
 
 function onModeChange() {
   clearInfo();
+  
+  console.log("onModeChange() called");
 
   // HARD reset in-memory state when grade changes
   remainingWords = [];
@@ -587,6 +589,14 @@ function onModeChange() {
   currentIndex = 0;
 
   const restored = loadState();
+  
+  console.log(getStorageKey());
+  console.log(restored);
+  console.log(remainingWords);
+  console.log(sessionWords);
+  console.log(wrongWords);
+  console.log(currentIndex);
+  
 
   if (restored && sessionWords.length > 0) {
     showWord();
@@ -595,10 +605,6 @@ function onModeChange() {
     updateDisplay("Press Start");
   }
 }
-
-
-
-
 
 function getFilteredWords() {
   const includeNormal = document.getElementById("normalChk").checked;
@@ -645,7 +651,6 @@ function startSession(n) {
   saveState();
 }
 
-
 /***********************
  * UI ACTIONS
  ***********************/
@@ -659,7 +664,6 @@ function startSession(n) {
   return grade === "grade1" ? grade1Words : grade6Words;
 }
  
-
 function markCorrect() {
   saveState();
   animateSwipe("right");
@@ -682,7 +686,6 @@ function nextWord() {
   clearInfo();
   saveState();
 }
-
 
 /***********************
  * DISPLAY
@@ -734,7 +737,6 @@ function resetAll() {
   clearInfo();
 }
 
-
 /***********************
  * SAVE/RELOAD
  ***********************/
@@ -748,11 +750,9 @@ function getModeKey() {
   return "none";
 }
 
-
 function getStorageKey() {
-  return `spellingAppState_v1_${getCurrentGradeKey}_${getModeKey()}`;
+  return `spellingAppState_v1_${getCurrentGradeKey()}_${getModeKey()}`;
 }
-
 
 function saveState() {
   const state = {
@@ -765,6 +765,8 @@ function saveState() {
 }
 
 function loadState() {
+	
+	
   const raw = localStorage.getItem(getStorageKey());
   if (!raw) return false;
 
