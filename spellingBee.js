@@ -590,14 +590,6 @@ function onModeChange() {
 
   const restored = loadState();
   
-  console.log(getStorageKey());
-  console.log(restored);
-  console.log(remainingWords);
-  console.log(sessionWords);
-  console.log(wrongWords);
-  console.log(currentIndex);
-  
-
   if (restored && sessionWords.length > 0) {
     showWord();
   } else {
