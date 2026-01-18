@@ -724,14 +724,14 @@ function showResults() {
     .map(w => `• ${w.word}`)
     .join("<br>");
 
-  document.getElementById("word").innerHTML =
+  document.getElementById("wordContent").innerHTML =
     "<strong>Words to review:</strong><br><br>" + list;
 	
   document.getElementById("wrongWordsButton").classList.remove("hidden");
 }
 
 function updateDisplay(text) {
-  document.getElementById("word").innerHTML = text;
+  document.getElementById("wordContent").innerHTML = text;
 }
 
 /***********************
