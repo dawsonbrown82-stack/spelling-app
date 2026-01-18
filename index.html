@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="SpellinBee.css?v=1.1">
+  <link rel="stylesheet" href="SpellinBee.css?v=1.2">
   <link rel="manifest" href="manifest.json">
   <title>Spelling Practice</title>
 
@@ -34,7 +34,7 @@
 </script>
 <body>
 
-  <div id="appVersion" style="position: fixed; bottom: 5px; right: 5px; font-size: 10px; opacity: 0.5;">v1.1</div>
+  <div id="appVersion" style="position: fixed; bottom: 5px; right: 5px; font-size: 10px; opacity: 0.5;">v1.2</div>
 
   <h1>Spelling Practice</h1>
   
@@ -46,8 +46,11 @@
   <div id="word">
 	<div id="wordContent">Loading...</div>
   </div>
+  
+  <div id="remainingSessionWords"></div>
+  
   <div class="controls">
-    <input id="countInput" type="number" value="20" min="1">
+    <input id="countInput" type="number" value="20" min="1"><div id="remainingWords"></div>
 	<br>
     <button onclick="startSession(Number(countInput.value))">Start</button>
     <button onclick="showSentence()">Sentence</button>
@@ -71,7 +74,7 @@
   <div id="infoArea" class="infoArea"></div>
   <!-- <pre id="debug" style="font-size:10px; white-space:pre-wrap;"></pre> -->
 	
-  <script src="spellingBee.js?v=1.1"></script>
+  <script src="spellingBee.js?v=1.2"></script>
 
 </body>
 </html>

@@ -38,6 +38,14 @@ h1 {
   position: relative;
 }
 
+#remainingSessionWords {
+	text-align: right;
+	font-size: 12px;
+	margin-top: -10px;
+	margin-bottom: 10px;
+	opacity: 0.7;
+}
+
 /* Swipe arrows (visual cue) */
 #word::before,
 #word::after {
@@ -89,6 +97,12 @@ input[type="number"] {
   text-align: center;
   border-radius: 8px;
   border: 1px solid #ccc;
+}
+
+#remainingWords {
+	font-size: 16px;
+	padding: 8px;
+	text-align: center;
 }
 
 /* --------- Results --------- */

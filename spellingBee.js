@@ -620,6 +620,7 @@ function getFilteredWords() {
 
 function startSession(n) {
   
+  const remWords = getElementById("remainingWords");
   
   if (sessionWords.length > 0 && currentIndex < sessionWords.length) {
     showWord();
@@ -634,10 +635,14 @@ function startSession(n) {
     return;
   }
 
+  
+
   for (let i = 0; i < n && remainingWords.length > 0; i++) {
     const idx = Math.floor(Math.random() * remainingWords.length);
     sessionWords.push(remainingWords.splice(idx, 1)[0]);
   }
+  
+  remWords.innerHTML = "/" + remainingWords.length
 
   showWord();
   saveState();
@@ -698,9 +703,12 @@ function nextWord() {
 
 function showWord() {
   const wordEl = document.getElementById("word");
+  const remSessionWords = document.getElementById("remainingSessionWords");
   const w = sessionWords[currentIndex];
 
-  currentWord = w
+
+  remSessionWords.innerHTML = sessionWords.length + " words remaining";
+  currentWord = w;
   // debug(JSON.stringify(currentWord, null, 2));
   wordEl.style.transition = "none";
   wordEl.style.transform = "translateX(0)";
@@ -709,6 +717,8 @@ function showWord() {
   wordEl.offsetHeight;
   
   wordEl.style.transition = "";
+  
+  
   
   updateDisplay(w.word);
   
