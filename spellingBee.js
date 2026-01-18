@@ -643,6 +643,19 @@ function startSession(n) {
   saveState();
 }
 
+function startWrongWordSession() {
+	sessionWords = [...wrongWords];
+	wrongWords = [];
+	currentIndex = 0
+	
+	
+	document.getElementById("wrongWordsButton").classList.add("hidden");
+	
+	showWord();
+	saveState();
+	
+}
+
 /***********************
  * UI ACTIONS
  ***********************/
@@ -712,6 +725,8 @@ function showResults() {
 
   document.getElementById("word").innerHTML =
     "<strong>Words to review:</strong><br><br>" + list;
+	
+  document.getElementById("wrongWordsButton").classList.remove("hidden");
 }
 
 function updateDisplay(text) {
