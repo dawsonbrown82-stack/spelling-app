@@ -701,7 +701,7 @@ function showWord() {
   const w = sessionWords[currentIndex];
 
   currentWord = w
-  debug(JSON.stringify(currentWord, null, 2));
+  // debug(JSON.stringify(currentWord, null, 2));
   wordEl.style.transition = "none";
   wordEl.style.transform = "translateX(0)";
   wordEl.style.opacity = "1";
