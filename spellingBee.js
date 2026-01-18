@@ -853,6 +853,7 @@ function resetAll() {
   localStorage.removeItem(getStorageKey());
   initFreshState();
   updateDisplay("Press Start");
+  debug("debugger is working");
   clearInfo();
 }
 
