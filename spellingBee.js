@@ -718,7 +718,7 @@ function getFilteredWords() {
 
 function startSession(n) {
   
-  const remWords = document.getElementById("remainingWords");
+  // const remWords = document.getElementById("remainingWords");
   
   if (sessionWords.length > 0 && currentIndex < sessionWords.length) {
     showWord();
@@ -740,7 +740,7 @@ function startSession(n) {
     sessionWords.push(remainingWords.splice(idx, 1)[0]);
   }
   
-  remWords.innerHTML = "/" + remainingWords.length
+  // remWords.innerHTML = "/" + remainingWords.length
 
   showWord();
   saveState();
