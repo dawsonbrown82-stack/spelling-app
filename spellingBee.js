@@ -718,7 +718,7 @@ function getFilteredWords() {
 
 function startSession(n) {
   
-  const remWords = getElementById("remainingWords");
+  const remWords = document.getElementById("remainingWords");
   
   if (sessionWords.length > 0 && currentIndex < sessionWords.length) {
     showWord();
