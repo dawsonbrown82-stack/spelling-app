@@ -289,14 +289,14 @@ const grade1Words = [
   { word: "truck", sentence: "My dad has a green truck.", definition: "a large motor vehicle used for carrying heavy loads", difficulty: "normal" },
   { word: "slow", sentence: "My sister is a Slow eater.", definition: "taking along time", difficulty: "normal" },
   { word: "under", sentence: "Mom says there aren't monsters under my bed.", definition: "below or beneath something", difficulty: "normal" },
-  { word: "train", sentence: "lam going to travel to Brazil by train.", definition: "a line of railroad cars hooked together and pulled by an engine along tracks", difficulty: "normal" },
+  { word: "train", sentence: "I am going to travel to Brazil by train.", definition: "a line of railroad cars hooked together and pulled by an engine along tracks", difficulty: "normal" },
   { word: "January", sentence: "My mom's birthday Is in January.", definition: "the first month of the year", difficulty: "normal" },
   { word: "ball", sentence: "You can throw, catch, or kick a ball.", definition: "something round, often a toy used in games", difficulty: "normal" },
   { word: "belt", sentence: "A belt helps to hold up your pants.", definition: "a strip of cloth or leather worn around your waist", difficulty: "normal" },
-  { word: "banana", sentence: "| put a banana In my smoothie.", definition: "a curved, yellow fruit that grows in large bunches", difficulty: "normal" },
+  { word: "banana", sentence: "I put a banana In my smoothie.", definition: "a curved, yellow fruit that grows in large bunches", difficulty: "normal" },
   { word: "brown", sentence: "She has brown eyes.", definition: "having the color of coffee or chocolate", difficulty: "normal" },
   { word: "cold", sentence: "Snow and ice are cold.", definition: "not hot", difficulty: "normal" },
-  { word: "quack", sentence: "| heard a duck's quack near the lake.", definition: "to make the characteristic cry of a duck", difficulty: "normal" },
+  { word: "quack", sentence: "I heard a duck's quack near the lake.", definition: "to make the characteristic cry of a duck", difficulty: "normal" },
   { word: "bug", sentence: "My sister wants to catch that bug.", definition: "an insect", difficulty: "normal" },
   { word: "fat", sentence: "The cat is getting fat because you feed It too much.", definition: "having a lot of flesh on the body", difficulty: "normal" },
   { word: "egg", sentence: "The bird had one egg in her nest.", definition: "an oval object that is laid by female birds", difficulty: "normal" },
@@ -376,7 +376,7 @@ const grade1Words = [
   { word: "pan", sentence: "Mom cooks the meat In a pan.", definition: "a shallow, open container used for cooking", difficulty: "normal" },
   { word: "wife", sentence: "He bought flowers for his wife.", definition: "a female partner in a marriage", difficulty: "normal" },
   { word: "pup", sentence: "The pup was only six months old.", definition: "a young dog", difficulty: "normal" },
-  { word: "red", sentence: "| saw a shiny, red fire truck.", definition: "the color of rubies, ladybugs, or tomatoes", difficulty: "normal" },
+  { word: "red", sentence: "I saw a shiny, red fire truck.", definition: "the color of rubies, ladybugs, or tomatoes", difficulty: "normal" },
   { word: "tongue", sentence: "My tongue Is inside my mouth.", definition: "the fleshy, moving part inside your mouth that helps you taste, swallow, and", difficulty: "normal" },
   { word: "sport", sentence: "Soccer is my favorite sport.", definition: "an athletic activity you do for fun and to compete with others", difficulty: "normal" },
   { word: "zebra", sentence: "We saw a zebra at the zoo!", definition: "an animal that looks like a horse and has black and white stripes on its body", difficulty: "normal" },
@@ -411,7 +411,7 @@ const grade1Words = [
   { word: "canyon", sentence: "We saw a big canyon on our trip.", definition: "a deep, narrow valley with steep sides", difficulty: "normal" },
   { word: "evening", sentence: "We play outside every evening.", definition: "the time of day when the sun starts to go down and it begins to get dark outside", difficulty: "normal" },
   { word: "crayon", sentence: "Color the apple using a red crayon.", definition: "a stick or pencil of colored wax", difficulty: "normal" },
-  { word: "game", sentence: "Let's play anew game with my cousins.", definition: "something done for fun or amusement; play", difficulty: "normal" },
+  { word: "game", sentence: "Let's play a new game with my cousins.", definition: "something done for fun or amusement; play", difficulty: "normal" },
   { word: "baby", sentence: "She went to the hospital to see the new baby.", definition: "a very young child", difficulty: "normal" },
   { word: "poor", sentence: "The poor man had no money to buy ice cream.", definition: "not having much money or possessions", difficulty: "normal" },
   { word: "apple", sentence: "An apple can be red or green.", definition: "a round fruit that grows on a tree", difficulty: "normal" },
@@ -823,4 +823,5 @@ function showSentence() {
 function clearInfo() {
   infoArea.innerHTML = "";
 }
+
 
