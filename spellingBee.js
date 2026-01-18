@@ -645,7 +645,7 @@ function init() {
 
 
 function setupSwipe() {
-  debug("setupSwipe ran");
+
   if (swipeInitialized) return;
   swipeInitialized = true;
 
@@ -653,12 +653,12 @@ function setupSwipe() {
 
   wordEl.addEventListener("touchstart", e => {
     touchStartX = e.changedTouches[0].screenX;
-	debuf("touchstart: " + touchStartX);
+
   });
 
   wordEl.addEventListener("touchend", e => {
     touchEndX = e.changedTouches[0].screenX;
-	debug("touchend: " + touchEndX);
+
     handleSwipe();
   });
 }
@@ -853,7 +853,7 @@ function resetAll() {
   localStorage.removeItem(getStorageKey());
   initFreshState();
   updateDisplay("Press Start");
-  debug("debugger is working");
+
   clearInfo();
 }
 
