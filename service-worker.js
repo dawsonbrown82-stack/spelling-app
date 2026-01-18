@@ -1,4 +1,4 @@
-const CACHE_NAME = "spelling-bee-v1.353";
+const CACHE_NAME = "spelling-bee-v1.354";
 
 const FILES_TO_CACHE = [
   "./",
