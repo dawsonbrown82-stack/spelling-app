@@ -645,6 +645,7 @@ function init() {
 
 
 function setupSwipe() {
+  debug("setupSwipe ran");
   if (swipeInitialized) return;
   swipeInitialized = true;
 
