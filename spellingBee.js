@@ -652,10 +652,12 @@ function setupSwipe() {
 
   wordEl.addEventListener("touchstart", e => {
     touchStartX = e.changedTouches[0].screenX;
+	debuf("touchstart: " + touchStartX);
   });
 
   wordEl.addEventListener("touchend", e => {
     touchEndX = e.changedTouches[0].screenX;
+	debug("touchend: " + touchEndX);
     handleSwipe();
   });
 }
