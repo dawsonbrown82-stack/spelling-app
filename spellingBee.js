@@ -832,7 +832,7 @@ function showWord() {
   wordEl.style.transition = "";
   
   
-  remSessionWords.innerHTML = sessionWords.length + " words remaining";
+  remSessionWords.innerHTML = sessionWords.length - currentIndex + " words remaining";
   
   updateDisplay(w.word);
   
