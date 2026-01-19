@@ -603,13 +603,13 @@ const grade1Words = [
 * DEBUG TOOLS
 ************************/
 
-document.addEventListener("touchstart", e => {
-  const el = document.elementFromPoint(
-    e.touches[0].clientX,
-    e.touches[0].clientY
-  );
-  debug("Touched: " + (el?.id || el?.className || el?.tagName));
-});
+// document.addEventListener("touchstart", e => {
+  // const el = document.elementFromPoint(
+    // e.touches[0].clientX,
+    // e.touches[0].clientY
+  // );
+  // debug("Touched: " + (el?.id || el?.className || el?.tagName));
+// });
 
 
 
