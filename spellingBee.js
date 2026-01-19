@@ -599,6 +599,19 @@ const grade1Words = [
 	{ word: "everyone", definition: "all the people in a group", sentence: "Everyone cheered when the show began.", difficulty: "challenging" },
 ];
 
+/************************
+* DEBUG TOOLS
+************************/
+
+document.addEventListener("touchstart", e => {
+  const el = document.elementFromPoint(
+    e.touches[0].clientX,
+    e.touches[0].clientY
+  );
+  debug("Touched: " + (el?.id || el?.className || el?.tagName));
+});
+
+
 
 /***********************
  * STATE
@@ -804,13 +817,12 @@ function nextWord() {
 
 function showWord() {
   const wordEl = document.getElementById("word");
-
+  const remSessionWords = document.getElementById("remainingSessionWords");
   const w = sessionWords[currentIndex];
 
 
 
   currentWord = w;
-  // debug(JSON.stringify(currentWord, null, 2));
   wordEl.style.transition = "none";
   wordEl.style.transform = "translateX(0)";
   wordEl.style.opacity = "1";
@@ -820,6 +832,7 @@ function showWord() {
   wordEl.style.transition = "";
   
   
+  remSessionWords.innerHTML = sessionWords.length + " words remaining";
   
   updateDisplay(w.word);
   
